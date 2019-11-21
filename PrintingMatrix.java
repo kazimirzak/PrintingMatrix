@@ -1,4 +1,5 @@
 public class printingMatrix {
+	
 	public String toString() {
 		String result = "[";
 		int[] maxNumberOfDigits = getMaxNumberOfIntegerDigitsInColumns(matrix);
