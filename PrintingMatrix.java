@@ -5,22 +5,22 @@ public class printingMatrix {
 		int[] maxNumberOfDigits = getMaxNumberOfIntegerDigitsInColumns(matrix);
 		for(int i = 0; i < matrix.length; i++) {
 			if(i != 0)
-				result += " [";
+				result = result + " [";
 			else
-				result += "[";
+				result = result + "[";
 			for(int j = 0; j < matrix[i].length; j++) {
-				result += spaces((int) maxNumberOfDigits[j] - getNumberOfDigits(matrix[i][j]));
-				result += (matrix[i][j] >= 0 ? " " : "");
-				result += String.format("%.3f", matrix[i][j]); // Will round specified by the default locale
+				result = result + spaces((int) maxNumberOfDigits[j] - getNumberOfDigits(matrix[i][j]));
+				result = result + (matrix[i][j] >= 0 ? " " : "");
+				result = result + String.format("%.3f", matrix[i][j]); // Will round specified by the default locale
 				if(j != matrix[i].length - 1)
-					result += ", ";
+					result = result + ", ";
 			}
 			if(i != matrix.length - 1)
-				result += "],\n";
+				result = result + "],\n";
 			else
-				result += "]";
+				result = result + "]";
 		}
-		result += "]";
+		result = result + "]";
 		return result;
 	}
 
