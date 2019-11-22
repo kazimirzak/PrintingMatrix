@@ -9,7 +9,7 @@ public class printingMatrix {
 			else
 				result = result + "[";
 			for(int j = 0; j < matrix[i].length; j++) {
-				result = result + spaces((int) maxNumberOfDigits[j] - getNumberOfDigits(matrix[i][j]));
+				result = result + spaces(maxNumberOfDigits[j] - getNumberOfDigits(matrix[i][j]));
 				result = result + (matrix[i][j] >= 0 ? " " : "");
 				result = result + String.format("%.3f", matrix[i][j]); // Will round specified by the default locale
 				if(j != matrix[i].length - 1)
