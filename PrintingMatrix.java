@@ -38,11 +38,11 @@ public class printingMatrix {
 
 	private static int getNumberOfDigits(double d) {
 		int count;
+		if(d < 0)
+				d = -1 * d;
 		if(d < 1 && d >= 0)
 			count = 1;
 		else {
-			if(d < 0)
-				d = -1 * d;
 			count = 0;
 			while(d >= 1.0) {
 				d = d / 10;
